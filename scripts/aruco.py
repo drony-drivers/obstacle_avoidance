@@ -42,7 +42,7 @@ def image_callback(msg):
             print(msg_str)
             pub.publish(msg)
             sub.unregister()
-            rospy.signal_shutdown("Landed")
+            # rospy.signal_shutdown("Landed")
         else:
             msg_str = "Marker ID: none, looking for marker"
             print(msg_str)
@@ -50,12 +50,12 @@ def image_callback(msg):
             pub.publish(msg)
 
 def main():
-    rospy.init_node('image_listener')
+    rospy.init_node('aruco_listener')
     image_topic = "/camera/color/image_raw"
     global sub
     global pub
     sub = rospy.Subscriber(image_topic, Image, image_callback)
-    pub = rospy.Publisher('/aruco/message', String, queue_size=1)
+    pub = rospy.Publisher('/aruco/message', String, queue_size=10)
     rospy.spin()
     
 
