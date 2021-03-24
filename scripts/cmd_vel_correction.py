@@ -38,7 +38,7 @@ def main():
     
     rospy.init_node('cmd_vel_correction')
     
-    pub = rospy.Publisher('/mavros/setpoint_velocity/cmd_vel_unstamped', Twist, queue_size=1)
+    pub = rospy.Publisher('/mavros/setpoint_velocity/cmd_vel_unstamped', Twist, queue_size=10)
     
     sub = rospy.Subscriber('/cmd_vel', Twist, record_vel)
     

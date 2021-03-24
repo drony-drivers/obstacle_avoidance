@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="obstacle_avoidance" name="aruco_detect" type="aruco.py" output="screen" />
+</launch>

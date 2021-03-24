@@ -1,6 +1,6 @@
 <launch>
 	<!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
-	<arg name="world_file" />
+	<arg name="world_file" default="interiit_world1.world"/>
 	<arg name="gui" default="true"/>
 
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -11,10 +11,12 @@
 	<!-- vim: set ft=xml noet : -->
 	<!-- Experimental launch script for APM based Drone -->
 
+	<include file="$(find obstacle_avoidance)/launch/initiate.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/apm.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/depthimage_to_laserscan.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/slam_toolbox_online_sync.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/move_base.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/unknown_exploration.launch">
+	<include file="$(find obstacle_avoidance)/launch/aruco_detection.launch">
 	</include>
 </launch>

@@ -9,4 +9,6 @@
     <rosparam file="$(find obstacle_avoidance)/config/trajectory_planner.yaml" command="load" />
   </node>
 
+  <node pkg="obstacle_avoidance" name="cmd_vel_correction" type="cmd_vel_correction.py" output="screen" />
+
 </launch>

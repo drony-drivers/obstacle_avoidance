@@ -1,0 +1,4 @@
+<launch>
+    <arg name="takeoff_altitude" default="2" />
+    <node pkg="obstacle_avoidance" name="initiate" type="initiate.py" output="screen" args="$(arg takeoff_altitude)" />
+</launch>

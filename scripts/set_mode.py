@@ -19,6 +19,7 @@ def set_mode_client(base_mode, custom_mode):
         exit(1)
 
 if __name__ == "__main__":
+    rospy.init_node('set_mode')
     if len(sys.argv) == 3:
         base_mode = int(sys.argv[1])
         custom_mode = sys.argv[2]
