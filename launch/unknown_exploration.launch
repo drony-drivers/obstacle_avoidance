@@ -1,0 +1,10 @@
+<launch>
+
+
+  <node pkg="explore_lite" type="explore" respawn="true" name="explore" output="screen">
+    <rosparam file="$(find obstacle_avoidance)/config/exploration.yaml" command="load" />
+  </node>
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find obstacle_avoidance)/rviz/arducoptor_move_base_slam.rviz"/>
+
+</launch>
