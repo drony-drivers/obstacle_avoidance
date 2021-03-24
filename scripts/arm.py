@@ -20,7 +20,7 @@ def arm_client(is_armed):
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:
-        is_armed = Bool(sys.argv[1])
+        is_armed = bool(sys.argv[1])
     else:
         is_armed = True
     print("Requesting to arm the drone...")

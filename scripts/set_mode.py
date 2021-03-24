@@ -21,7 +21,7 @@ def set_mode_client(base_mode, custom_mode):
 if __name__ == "__main__":
     if len(sys.argv) == 3:
         base_mode = int(sys.argv[1])
-        custom_mode = sy2.argv[2]
+        custom_mode = sys.argv[2]
     if len(sys.argv) == 2:
         custom_mode = sys.argv[1]
     else:
