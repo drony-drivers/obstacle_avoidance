@@ -4,6 +4,7 @@ from __future__ import print_function
 
 import sys
 import rospy
+import time
 from mavros_msgs.srv import CommandBool
 
 def arm_client(is_armed):
@@ -24,4 +25,8 @@ if __name__ == "__main__":
     else:
         is_armed = True
     print("Requesting to arm the drone...")
-    print("Armed = ", arm_client(is_armed))
+    # print(str(arm_client(is_armed)).split()[2])
+    while not arm_client(is_armed).success:
+        print("Failed to arm")
+        time.sleep(1)
+    print("Armed!")
