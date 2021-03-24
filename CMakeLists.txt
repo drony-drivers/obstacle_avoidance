@@ -12,7 +12,9 @@ find_package(catkin REQUIRED COMPONENTS
   explore_lite
   geometry_msgs
   mavros
+  mavros_msgs
   move_base
+  python-opencv
   roscpp
   rospy
   sensor_msgs

@@ -16,7 +16,6 @@
 	<include file="$(find obstacle_avoidance)/launch/depthimage_to_laserscan.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/slam_toolbox_online_sync.launch"></include>
 	<include file="$(find obstacle_avoidance)/launch/move_base.launch"></include>
-	<include file="$(find obstacle_avoidance)/launch/unknown_exploration.launch">
-	<include file="$(find obstacle_avoidance)/launch/aruco_detection.launch">
-	</include>
+	<include file="$(find obstacle_avoidance)/launch/unknown_exploration.launch"></include>
+	<include file="$(find obstacle_avoidance)/launch/aruco_detection.launch"></include>
 </launch>

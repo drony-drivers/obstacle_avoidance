@@ -10,7 +10,7 @@ from takeoff import takeoff_client
 
 if __name__ == "__main__":
 
-    wait_time = 10
+    wait_time = 30
     print("Waiting for {} seconds before initiation".format(wait_time))
     time.sleep(wait_time)
     print("Initiation started!")

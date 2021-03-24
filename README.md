@@ -42,9 +42,13 @@ echo 'source ~/ardupilot_ws/devel/setup.bash' >> ~/.bashrc
 ```
 
 ### Install ROS dependencies
-Execute the following
+This command installs all the ROS dependencies
 ``` sh
 rosdep install obstacle_avoidance
+```
+### Additional dependencies
+``` sh
+pip install imutils
 ```
 
 ## Running worlds

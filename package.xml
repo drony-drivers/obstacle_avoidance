@@ -7,13 +7,14 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <maintainer email="ee18b022@iittp.ac.in">Prabhat</maintainer>
   <maintainer email="ubuntu@todo.todo">ubuntu</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>GPLv3</license>
 
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
@@ -53,7 +54,9 @@
   <build_depend>explore_lite</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>mavros</build_depend>
+  <build_depend>mavros_msgs</build_depend>
   <build_depend>move_base</build_depend>
+  <build_depend>python-opencv</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
   <build_depend>sensor_msgs</build_depend>
@@ -63,7 +66,9 @@
   <build_export_depend>explore_lite</build_export_depend>
   <build_export_depend>geometry_msgs</build_export_depend>
   <build_export_depend>mavros</build_export_depend>
+  <build_export_depend>mavros_msgs</build_export_depend>
   <build_export_depend>move_base</build_export_depend>
+  <build_export_depend>python-opencv</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>sensor_msgs</build_export_depend>
@@ -73,7 +78,9 @@
   <exec_depend>explore_lite</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>mavros</exec_depend>
+  <exec_depend>mavros_msgs</exec_depend>
   <exec_depend>move_base</exec_depend>
+  <exec_depend>python-opencv</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
