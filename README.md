@@ -11,9 +11,9 @@ This is the ROS package we'll be working on.
 
 ## Installation
 
-First follow all the instructions given in the `installation.md` file.
+First follow all the instructions given in the `installation.md` file. (The same instruction file given at the beginning)
 
-Then install mavros using the following instructions. (Taken from  [here](https://ardupilot.org/dev/docs/ros-install.html#installing-mavros))
+Then install mavros using the following instructions. (Taken from [here](https://ardupilot.org/dev/docs/ros-install.html#installing-mavros))
 
 ``` sh
 sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras
@@ -23,7 +23,7 @@ chmod a+x install_geographiclib_datasets.sh
 rm install_geographiclib_datasets.sh
 ```
 
-Then, create a catkin workspace and clone this repository in the `src` folder. If you want to use ssh, change `git clone https://github.com/drony-drivers/obstacle_avoidance` command given below to `git clone git@github.com:drony-drivers/interiit21.git`.
+Then, create a catkin workspace and clone this repository in the `src` folder. 
 
 ``` sh
 cd ~
@@ -42,18 +42,21 @@ echo 'source ~/ardupilot_ws/devel/setup.bash' >> ~/.bashrc
 ```
 
 ### Install ROS dependencies
-This command installs all the ROS dependencies
+
 ``` sh
-rosdep install obstacle_avoidance
+  sudo apt install ros-melodic-depthimage-to_laserscan ros-melodic-explore-lite ros-melodic-geometry-msgs ros-melodic-mavros ros-melodic-mavros-msgs ros-melodic-move-base ros-melodic-roscpp ros-melodic-rospy ros-melodic-sensor-msgs ros-melodic-slam-toolbox ros-melodic-std-msgs 
+
+  rosdep install obstacle_avoidance
 ```
 ### Additional dependencies
+
 ``` sh
 pip install imutils
 ```
 
 ## Running worlds
 
-To run a Gazebo world, `rosrun obstacle_avoidance <world_file>`  execute the following. If `<world_file>` is "interiit_world1.world", then run the following.
+To run a Gazebo world, `rosrun obstacle_avoidance <world_file>`  execute the following. If `<world_file>` is "interiit_world1.world", then run the following. Note that all the world files must be present in the `worlds` folder.
 
 ``` sh
 rosrun obstacle_avoidance start_sim.sh interiit_world1.world

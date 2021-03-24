@@ -14,7 +14,6 @@ find_package(catkin REQUIRED COMPONENTS
   mavros
   mavros_msgs
   move_base
-  python-opencv
   roscpp
   rospy
   sensor_msgs
