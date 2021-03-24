@@ -49,8 +49,8 @@ rosdep install obstacle_avoidance
 
 ## Running worlds
 
-To run world 1, execute the following. (Same pattern for world 2 and 3)
+To run a Gazebo world, `rosrun obstacle_avoidance <world_file>`  execute the following. If `<world_file>` is "interiit_world1.world", then run the following.
 
 ``` sh
-rosrun interiit21 start_sim_1.sh
+rosrun obstacle_avoidance start_sim.sh interiit_world1.world
 ```
