@@ -23,15 +23,16 @@ def make_correction(given_vx, given_vz, given_wz):
     correct_vx = given_vx*math.cos(global_tz)
     correct_vy = given_vx*math.sin(global_tz)
 
-    rospy.loginfo("given(vx, wz):", given_vx, given_wz)
-    rospy.loginfo("corrected(vx, vy):", correct_vx, correct_vy)
-    msg.linear.x = correct_vx
-    msg.linear.y = correct_vy
+    # rospy.loginfo("given(vx, wz): {}, {}".format(given_vx, given_wz))
+    # rospy.loginfo("corrected(vx, vy): {}, {}".format(correct_vx, correct_vy))
+    msg.linear.x = -correct_vx
+    msg.linear.y = -correct_vy
     msg.linear.z = given_vz
     msg.angular.x = 0.0
     msg.angular.y = 0.0
     msg.angular.z = given_wz
     pub.publish(msg)
+    # print(msg)
 
 def main():
     global pub

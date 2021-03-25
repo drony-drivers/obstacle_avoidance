@@ -45,7 +45,7 @@ def image_callback(msg):
             # rospy.signal_shutdown("Landed")
         else:
             msg_str = "Marker ID: none, looking for marker"
-            print(msg_str)
+            # print(msg_str)
             msg = String(msg_str)
             pub.publish(msg)
 
